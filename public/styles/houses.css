@@ -1,0 +1,24 @@
+.house-none {
+	background-color: beige;
+	color: rgb(181, 149, 92);
+}
+
+.house-gryffindor {
+	background-color: rgb(146, 1, 1);
+	color: rgb(209, 209, 8);
+}
+
+.house-slytherin {
+	background-color: rgb(2, 103, 2);
+	color: silver;
+}
+
+.house-hufflepuff {
+	background-color: rgb(227, 227, 54);
+	color: gray;
+}
+
+.house-ravenclaw {
+	background-color: blue;
+	color: silver;
+}

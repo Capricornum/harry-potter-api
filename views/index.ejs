@@ -6,10 +6,55 @@
 	<title>Harry Potter Inspirations</title>
 
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/houses.css">
 </head>
-<body>
+<body class="container-house-styles house-none">
 	<main>
-		<h1>Welcome fellow sorcerer</h1>
+		<h1>Welcome to Hogwarts</h1>
+
+		<aside id="house-sorting">
+			<h2 id="house-title">The sorting hat will decide your house</h2>
+			<figure>
+				<img src="images/sorting-hat-original.jpg" alt="The sorting hat" height="250" width="250">
+			</figure>
+			<button type="button" class="primary-btn" id="house-selector">Get Sorted</button>
+		</aside>
+		
+		<aside id="spells">
+			<h2>Your repertoire is magical</h2>
+			<figure>
+				<img class="hide-img figure-Content" src="images/elder-wand.png" alt="Drawing of the elder wand" height="250" width="250">
+				<ul class="asset-list figure-content">
+					<% if(locals.spells && locals.spells.length > 0) { spells.forEach(spell => { %>
+						<li>
+							<%= spell.attributes.slug %> (<%= spell.attributes.category.toUpperCase() %>)
+						</li>
+					<% }); }%>
+				</ul>
+			</figure>
+			<form action="/spell" method="GET">
+				<button type="submit" class="primary-btn" id="spell-learner">Learn a new spell</button>
+			</form>
+		</aside>
+
+		<aside id="spells">
+			<h2>Your repertoire is magical</h2>
+			<figure>
+				<img class="hide-img figure-Content" src="images/elder-wand.png" alt="Drawing of the elder wand" height="250" width="250">
+				<ul class="asset-list figure-content">
+					<% if(locals.spells && locals.spells.length > 0) { spells.forEach(spell => { %>
+						<li>
+							<%= spell.attributes.slug %> (<%= spell.attributes.category.toUpperCase() %>)
+						</li>
+					<% }); }%>
+				</ul>
+			</figure>
+			<form action="/spell" method="GET">
+				<button type="submit" class="primary-btn" id="spell-learner">Learn a new spell</button>
+			</form>
+		</aside>
 	</main>
+
+	<script src="js/main.js"></script>
 </body>
 </html>
