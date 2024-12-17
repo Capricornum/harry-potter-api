@@ -70,4 +70,14 @@ figure:hover .hide-img {
 	padding: .5rem;
 	z-index: 0;
 	overflow-y: scroll;
+	text-align: start;
+}
+
+@media (max-width: 820px) {
+	h1 {
+		grid-column: 1/2;
+	}
+	main {
+		grid: auto / 1fr;
+	}
 }

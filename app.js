@@ -7,25 +7,33 @@ const port = 8080;
 const API_URL = "https://api.potterdb.com/v1/"
 
 const mySpells = [];
+const myPotions = [];
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
-	res.render("index.ejs", { spells: mySpells });
+	res.render("index.ejs", { spells: mySpells, potions: myPotions });
 });
 
 app.get("/spell", async (req, res) => {
-	//get a new spell from the api
-	//add it to the existing spells
-	//render with existing spells
 	try {
 		const response = await axios.get(API_URL + "spells");
-		console.log(JSON.stringify(response.data.data[17]));
 		mySpells.push(response.data.data[mySpells.length]);
-		res.render("index.ejs", { spells: mySpells })
+		res.render("index.ejs", { spells: mySpells, potions: myPotions })
 	} catch (error) {
+		res.status(400).send();
+	}
+});
 
+app.get("/potion", async (req, res) => {
+	try {
+		const response = await axios.get(API_URL + "potions");
+		myPotions.push(response.data.data[myPotions.length]);
+		console.log(response.data.data[0]);
+		res.render("index.ejs", { spells: mySpells, potions: myPotions })
+	} catch (error) {
+		res.status(400).send();
 	}
 });
 

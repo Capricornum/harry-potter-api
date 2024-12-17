@@ -19,23 +19,6 @@
 			</figure>
 			<button type="button" class="primary-btn" id="house-selector">Get Sorted</button>
 		</aside>
-		
-		<aside id="spells">
-			<h2>Your repertoire is magical</h2>
-			<figure>
-				<img class="hide-img figure-Content" src="images/elder-wand.png" alt="Drawing of the elder wand" height="250" width="250">
-				<ul class="asset-list figure-content">
-					<% if(locals.spells && locals.spells.length > 0) { spells.forEach(spell => { %>
-						<li>
-							<%= spell.attributes.slug %> (<%= spell.attributes.category.toUpperCase() %>)
-						</li>
-					<% }); }%>
-				</ul>
-			</figure>
-			<form action="/spell" method="GET">
-				<button type="submit" class="primary-btn" id="spell-learner">Learn a new spell</button>
-			</form>
-		</aside>
 
 		<aside id="spells">
 			<h2>Your repertoire is magical</h2>
@@ -50,7 +33,24 @@
 				</ul>
 			</figure>
 			<form action="/spell" method="GET">
-				<button type="submit" class="primary-btn" id="spell-learner">Learn a new spell</button>
+				<button type="submit" class="primary-btn">Learn a new spell</button>
+			</form>
+		</aside>
+
+		<aside id="potions">
+			<h2>Your quite the concoction</h2>
+			<figure>
+				<img class="hide-img figure-Content" src="images/cauldron.jpg" alt="Drawing of a bubbling cauldron" height="250" width="250">
+				<ul class="asset-list figure-content">
+					<% if(locals.potions && locals.potions.length > 0) { potions.forEach(potion => { %>
+						<li>
+							<%= potion.attributes.name %>
+						</li>
+					<% }); }%>
+				</ul>
+			</figure>
+			<form action="/potion" method="GET">
+				<button type="submit" class="primary-btn">Brew a potion</button>
 			</form>
 		</aside>
 	</main>
