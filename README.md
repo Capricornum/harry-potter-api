@@ -65,24 +65,25 @@ Stelle sicher, dass der Port 8080 nicht von einem anderen Dienst verwendet wird.
 
 ## 🔍 **Projektstruktur**
 
-.
-├── public/                 # Statische Dateien wie CSS, Bilder und JS
-│   ├── styles/             # CSS-Dateien
-│   ├── images/             # Bilddateien
-│   └── js/                 # Client-seitige JS-Dateien
-├── views/                  # EJS-Templates für die HTML-Darstellung
-│   ├── index.ejs           # Hauptseite
-│   └── layout.ejs          # Layout-Template
-├── app.js                  # Hauptserver-Datei
-├── package.json            # Projektabhängigkeiten und Skripte
-└── README.md               # Projektbeschreibung (diese Datei)
+```md
+Project/
+|--public/									# Static files served under express.static()
+|		|--styles/							# CSS files
+|		|--images/							# images
+|		|--js/									# client-side javascript
+|--views/										# EJS-Template for HTML
+|--app.js										# Main server file
+|--package.json							# Project dependencies and scripts
+|--.gitignore								# git ignore commands
+`--README.md								# Project description (this file)
+```
 
 ## 🧪 **Features**
 
-🎩 Sprechender Hut: Werde in ein Hogwarts-Haus eingeteilt.
-📜 Zaubersprüche: Lerne neue Zauber und erweitere dein magisches Repertoire.
-🧪 Tränke: Braue magische Tränke.
-📱 Responsives Design: Optimiert für Desktop und Mobile.
+- 🎩 Sprechender Hut: Werde in ein Hogwarts-Haus eingeteilt.
+- 📜 Zaubersprüche: Lerne neue Zauber und erweitere dein magisches Repertoire.
+- 🧪 Tränke: Braue magische Tränke.
+- 📱 Responsives Design: Optimiert für Desktop und Mobile.
 
 ## 📄 **Lizenz**
 
