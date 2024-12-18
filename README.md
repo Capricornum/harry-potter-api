@@ -70,7 +70,7 @@ Project/
 |--public/									# Static files served under express.static()
 |	|--styles/								# CSS files
 |	|--images/								# images
-|	|--js/										# client-side javascript
+|	`--js/										# client-side javascript
 |--views/										# EJS-Template for HTML
 |--app.js										# Main server file
 |--package.json							# Project dependencies and scripts
