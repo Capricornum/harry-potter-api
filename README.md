@@ -68,9 +68,9 @@ Stelle sicher, dass der Port 8080 nicht von einem anderen Dienst verwendet wird.
 ```md
 Project/
 |--public/									# Static files served under express.static()
-|		|--styles/							# CSS files
-|		|--images/							# images
-|		|--js/									# client-side javascript
+|	|--styles/								# CSS files
+|	|--images/								# images
+|	|--js/										# client-side javascript
 |--views/										# EJS-Template for HTML
 |--app.js										# Main server file
 |--package.json							# Project dependencies and scripts
