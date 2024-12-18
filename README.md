@@ -63,21 +63,6 @@ Stelle sicher, dass der Port 8080 nicht von einem anderen Dienst verwendet wird.
 
 ---
 
-## 🔍 **Projektstruktur**
-
-```md
-Project/
-|--public/									# Static files served under express.static()
-|	|--styles/								# CSS files
-|	|--images/								# images
-|	`--js/										# client-side javascript
-|--views/										# EJS-Template for HTML
-|--app.js										# Main server file
-|--package.json							# Project dependencies and scripts
-|--.gitignore								# git ignore commands
-`--README.md								# Project description (this file)
-```
-
 ## 🧪 **Features**
 
 - 🎩 Sprechender Hut: Werde in ein Hogwarts-Haus eingeteilt.
@@ -85,9 +70,13 @@ Project/
 - 🧪 Tränke: Braue magische Tränke.
 - 📱 Responsives Design: Optimiert für Desktop und Mobile.
 
+---
+
 ## 📄 **Lizenz**
 
 Dieses Projekt steht unter der MIT-Lizenz. Siehe die LICENSE-Datei für weitere Informationen.
+
+---
 
 ## 💡 **Screenshots**
 
